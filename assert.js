@@ -16,6 +16,12 @@ var assert = {
     if(assertionToCheck !== otherAssertion) {
       throw new Error("Assertion failed: " + assertionToCheck + " does not equal " + otherAssertion);
     }
+  },
+
+  isArray: function(assertionToCheck) {
+    if(Object.prototype.toString.call(assertionToCheck) !== '[object Array]') {
+      throw new Error("Assertion failed: " + assertionToCheck + " is not an Array");
+    }
   }
 
 };

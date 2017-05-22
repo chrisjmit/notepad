@@ -1,6 +1,13 @@
-function testNoteListContainsNote() {
+function testNoteListHoldsNotes() {
   var list = new List();
-  assert.isTrue(list._notes = [])
+  assert.isArray(list._notes);
 }
 
-testNoteListContainsNote();
+testNoteListHoldsNotes();
+
+function testNoteListCReturnsNotes() {
+  var list = new List();
+  assert.isArray(list.getNotes());
+}
+
+testNoteListCReturnsNotes();
