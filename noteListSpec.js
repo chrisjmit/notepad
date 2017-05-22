@@ -1,6 +1,6 @@
 function testNoteListContainsNote() {
   var list = new List();
-  assert.isEq(list._notes, [])
+  assert.isTrue(list._notes = [])
 }
 
 testNoteListContainsNote();
