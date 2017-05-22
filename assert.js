@@ -12,4 +12,10 @@ var assert = {
     }
   },
 
+  isEq: function(assertionToCheck, otherAssertion) {
+    if(assertionToCheck !== otherAssertion) {
+      throw new Error("Assertion failed: " + assertionToCheck + " does not equal " + otherAssertion);
+    }
+  }
+
 };

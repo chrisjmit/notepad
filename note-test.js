@@ -1,19 +1,13 @@
-(function(exports){
-  function testNoteInitializesWithText(){
-    var note = new Note("test");
-
-    if (note.text !== "test") {
-      throw new Error("Note requires text argument");
-    }
-  }
-
-  testNoteInitializesWithText();
-})(this);
-
-
 function testNoteInitializesWithText(){
-  var note = new Note("Remember to remember");
-  assert.isTrue(note.text === "Remember to remember");
+  var note = new Note("My favourite language is JavaScript");
+  assert.isTrue(note.text === "My favourite language is JavaScript");
 }
 
 testNoteInitializesWithText();
+
+function testNoteTextCanBeRetrieved(){
+  var note = new Note("My favourite language is JavaScript");
+  assert.isEq(note.getText(), "My favourite language is JavaScript");
+}
+
+testNoteTextCanBeRetrieved();
