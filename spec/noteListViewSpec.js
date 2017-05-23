@@ -15,7 +15,9 @@ testViewCanStoreList();
 function testViewContainsListNote(){
   var list = new List();
   var view = new View(list);
-  assert.isEq(view.getLists(), [[Note]]);
+  list.addNote('message');
+  view.addList(list);
+  assert.isEq(view.firstItem(), list.getNotes());
 }
 
 testViewContainsListNote();
