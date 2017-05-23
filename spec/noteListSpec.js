@@ -1,4 +1,5 @@
 function testNoteListHoldsNotes() {
+  console.log("Test 1: Note list holds notes");
   var list = new List();
   assert.isArray(list._notes);
 }
@@ -6,6 +7,7 @@ function testNoteListHoldsNotes() {
 testNoteListHoldsNotes();
 
 function testNoteListReturnsNotes() {
+  console.log("Test 2: Note list returns notes");
   var list = new List();
   assert.isArray(list.getNotes());
 }
