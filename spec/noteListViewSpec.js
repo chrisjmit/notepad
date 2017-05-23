@@ -5,20 +5,11 @@ function testInstantiatesNoteListView() {
 
 testInstantiatesNoteListView();
 
-function testViewCanStoreList() {
-  var view = new View();
-  assert.isArray(view._lists);
-}
-
-testViewCanStoreList();
-
 function testViewContainsListNote(){
   var list = new List();
-  var view = new View();
+  var view = new View(list);
   list.addNote('message');
-  var item = list.getNote(0);
-  view.addList(item);
-  assert.isEq(view.getList(0), [List]);
+  assert.isEq(view.getLists(), list);
 }
 
 testViewContainsListNote();

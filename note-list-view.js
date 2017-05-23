@@ -1,6 +1,6 @@
 (function(exports) {
-  function View() {
-    this._lists = [];
+  function View(list) {
+    this._lists = list;
   }
 
 
@@ -8,7 +8,7 @@
     return this._lists;
   };
 
-  View.prototype.addList = function() {
+  View.prototype.addList = function(list) {
     this._lists.push(list);
   };
 
