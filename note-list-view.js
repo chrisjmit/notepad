@@ -9,19 +9,12 @@
   };
 
   View.prototype.addList = function() {
-    var list = ;
-    this._lists.push(list)
+    this._lists.push(list);
   };
 
-  View.prototype.firstItem = function() {
-    for(var i = 0; i < this._lists.length; i++) {
-      console.log(i);
-      this.getLists()[i];
-      console.log(note._text);
-      return note._text;
-    }
-    return this._lists
-  }
+  View.prototype.getList = function(index){
+    return this._lists[index];
+  };
 
   exports.View = View;
 })(this);

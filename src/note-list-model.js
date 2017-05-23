@@ -12,5 +12,9 @@
     this._notes.push(note);
   };
 
+  List.prototype.getNote = function(index) {
+    return this._notes[index];
+  };
+
   exports.List = List;
 })(this);

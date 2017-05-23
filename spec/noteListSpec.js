@@ -21,3 +21,12 @@ function testListStoresSingleNote(){
   }
 
 testListStoresSingleNote();
+
+function testToFindListItem(){
+  var list = new List();
+  list.addNote("one");
+  list.addNote("two");
+  assert.isEq(list.getNote(1)._text, "two");
+  }
+
+testToFindListItem();

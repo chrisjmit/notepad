@@ -14,10 +14,11 @@ testViewCanStoreList();
 
 function testViewContainsListNote(){
   var list = new List();
-  var view = new View(list);
+  var view = new View();
   list.addNote('message');
-  view.addList(list);
-  assert.isEq(view.firstItem(), list.getNotes());
+  var item = list.getNote(0);
+  view.addList(item);
+  assert.isEq(view.getList(0), [List]);
 }
 
 testViewContainsListNote();
