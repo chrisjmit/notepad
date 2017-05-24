@@ -13,3 +13,13 @@ function testViewContainsListNote(){
 }
 
 testViewContainsListNote();
+
+function testViewReturnsListContents() {
+  var list = new List();
+  var view = new View(list);
+  list.addNote('message');
+  var html = "<ul><li><div>message</div></li></ul>";
+  assert.isEq(view.renderHTML() === html);
+}
+
+testViewReturnsListContents();
