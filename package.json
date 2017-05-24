@@ -1,0 +1,26 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "Build a notes app as a frontend, single page web app.",
+  "main": "note-list-view.js",
+  "dependencies": {
+    "hapi": "^16.1.1",
+    "http-server": "^0.10.0"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisjmit/notes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisjmit/notes/issues"
+  },
+  "homepage": "https://github.com/chrisjmit/notes#readme"
+}
