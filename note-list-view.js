@@ -9,7 +9,8 @@
 
   View.prototype.renderHTML = function() {
     for (var i = 0; i < this.list.getNotes().length; i++) {
-      return "<ul><li><div>" + this.list.getNotes()[i].getText() + "</div></li></ul>";
+      var item = "<li><div>" + this.list.getNotes()[i].getText() + "</div></li>";
+      return "<ul>" + item + "</ul>";
       }
     };
 

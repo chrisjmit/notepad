@@ -14,12 +14,23 @@ function testViewContainsListNote(){
 
 testViewContainsListNote();
 
-function testViewReturnsListContents() {
+function testViewReturnsListWithOneItem() {
   var list = new List();
   list.addNote("message");
   var view = new View(list);
-  var html = "<ul><li><div>message</div></li></ul>";
-  assert.isEq(view.renderHTML(), html);
+  assert.isEq(view.renderHTML(), "<ul><li><div>message</div></li></ul>");
 }
 
-testViewReturnsListContents();
+testViewReturnsListWithOneItem();
+
+
+function testViewReturnsListWithMultipleItems() {
+  var list = new List();
+  list.addNote("buy food for Red");
+  list.addNote("take out the recycling");
+  list.addNote("remember to code");
+  var view = new View(list);
+  assert.isEq(view.renderHTML(), "<ul><li><div>buy food for Red</div></li><li><div>take out the recycling</div></li><li><div>remember to code</div></li></ul>");
+}
+
+testViewReturnsListWithMultipleItems();
